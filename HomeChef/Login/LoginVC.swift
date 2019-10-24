@@ -10,13 +10,21 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+    @IBOutlet weak var Phone: UITextField!
+    @IBOutlet weak var Password: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func LoginBtn(_ sender: Any) {
+    }
+    
+    @IBAction func BackBtn(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 

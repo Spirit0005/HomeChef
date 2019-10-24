@@ -39,6 +39,9 @@
                                 <state key="normal" title="SIGNUP">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="SignupBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gB3-l0-bGX"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qSG-md-yVP">
                                 <rect key="frame" x="50" y="312.5" width="314" height="271"/>
@@ -114,6 +117,9 @@
                                         <state key="normal" title="LOGIN">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="LoginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jC8-4z-gPV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -138,6 +144,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="Email" destination="ViA-9S-hVs" id="9eO-nN-zf8"/>
+                        <outlet property="Name" destination="Bob-Wz-1R3" id="sbE-ne-svH"/>
+                        <outlet property="Password" destination="RrM-FF-mwX" id="SZd-eV-0zN"/>
+                        <outlet property="Phone" destination="MWw-Gn-mdh" id="mLk-PH-VXa"/>
                         <segue destination="ZGm-pC-gOI" kind="presentation" identifier="login" id="yMk-nk-Pjt"/>
                     </connections>
                 </viewController>
@@ -207,6 +217,9 @@
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="LoginBtn:" destination="ZGm-pC-gOI" eventType="touchUpInside" id="JiE-O5-r9n"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOe-H5-rf7">
                                 <rect key="frame" x="20" y="66.5" width="41" height="30"/>
@@ -217,6 +230,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" backgroundImage="arrow.left" catalog="system"/>
+                                <connections>
+                                    <action selector="BackBtn:" destination="ZGm-pC-gOI" eventType="touchUpInside" id="idp-fv-AsN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.33785361050000001" green="0.67181688549999996" blue="0.1214448437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -235,6 +251,8 @@
                         <viewLayoutGuide key="safeArea" id="nnc-Hy-NSN"/>
                     </view>
                     <connections>
+                        <outlet property="Password" destination="rHu-qW-ntE" id="6j5-LC-ZDG"/>
+                        <outlet property="Phone" destination="6Uc-3s-mOH" id="Cr9-vb-mVQ"/>
                         <segue destination="6Fl-SY-SEX" kind="presentation" identifier="home" id="sMd-Cm-Lfl"/>
                     </connections>
                 </viewController>
