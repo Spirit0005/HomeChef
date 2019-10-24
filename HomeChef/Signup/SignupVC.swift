@@ -76,10 +76,16 @@ class SignupVC: UIViewController {
                     if let x = payload as? Dictionary<String,Any>{
                         print("this is x \(x["message"]!)")
                        // self.showAlert("Message", x["message"]! as! String)
-                        self.performSegue(withIdentifier: "login", sender: nil)
-//                        if(x["message"]! as! String == "User registered successfully"){
-//                            value = true
-//                        }
+                        if(x["message"]! as! String == "User registered successfully"){
+                            
+                            self.performSegue(withIdentifier: "login", sender: nil)
+                            
+
+                        }else{
+                            self.showAlert("Message", x["message"]! as! String)
+
+                        }
+//                        
                     }
                     break
                 case .failure(let error):
