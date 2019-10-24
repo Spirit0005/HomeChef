@@ -1,0 +1,6 @@
+framework module Pods_HomeChef {
+  umbrella header "Pods-HomeChef-umbrella.h"
+
+  export *
+  module * { export * }
+}

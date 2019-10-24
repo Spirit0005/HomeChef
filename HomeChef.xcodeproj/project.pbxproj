@@ -3,15 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BB25E772362019E0098CD01 /* Source in Resources */ = {isa = PBXBuildFile; fileRef = 5BB25E762362019E0098CD01 /* Source */; };
+		5BB25E7D236205140098CD01 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB25E7C236205140098CD01 /* Reachability.swift */; };
+		5BB25E7F23620A300098CD01 /* APIUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB25E7E23620A300098CD01 /* APIUrl.swift */; };
 		5C073A882361A1EA00E89CD7 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C073A872361A1EA00E89CD7 /* LoginVC.swift */; };
 		5C073A8A2361A1FB00E89CD7 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C073A892361A1FB00E89CD7 /* HomeVC.swift */; };
 		5C073A8C2361A5A300E89CD7 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C073A8B2361A5A300E89CD7 /* SignupVC.swift */; };
 		5C073A8F2361AE3500E89CD7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C073A8E2361AE3500E89CD7 /* Extensions.swift */; };
 		5C073A912361C99000E89CD7 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C073A902361C99000E89CD7 /* NetworkingService.swift */; };
+		704A7A2773C0D18F2A490361 /* Pods_HomeChef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2762C603B8D3CB522B50C7D /* Pods_HomeChef.framework */; };
 		BB87EF022360F55600C4A66F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB87EF012360F55600C4A66F /* AppDelegate.swift */; };
 		BB87EF072360F55600C4A66F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB87EF052360F55600C4A66F /* Main.storyboard */; };
 		BB87EF092360F55A00C4A66F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB87EF082360F55A00C4A66F /* Assets.xcassets */; };
@@ -20,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3FAFAB0AF8D083F427B98758 /* Pods-HomeChef.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeChef.debug.xcconfig"; path = "Target Support Files/Pods-HomeChef/Pods-HomeChef.debug.xcconfig"; sourceTree = "<group>"; };
+		5BB25E762362019E0098CD01 /* Source */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Source; path = "../../../../Downloads/Alamofire-master/Source"; sourceTree = "<group>"; };
+		5BB25E7C236205140098CD01 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = "../../../../Downloads/Reachability.swift-master/Sources/Reachability.swift"; sourceTree = "<group>"; };
+		5BB25E7E23620A300098CD01 /* APIUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUrl.swift; sourceTree = "<group>"; };
 		5C073A872361A1EA00E89CD7 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		5C073A892361A1FB00E89CD7 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		5C073A8B2361A5A300E89CD7 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
@@ -32,6 +40,8 @@
 		BB87EF0B2360F55A00C4A66F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB87EF0D2360F55A00C4A66F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB87EF132360FB9000C4A66F /* Custom_Btn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom_Btn.swift; sourceTree = "<group>"; };
+		C2762C603B8D3CB522B50C7D /* Pods_HomeChef.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeChef.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6CEA8DACAECC24471AD4977 /* Pods-HomeChef.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeChef.release.xcconfig"; path = "Target Support Files/Pods-HomeChef/Pods-HomeChef.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,12 +49,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				704A7A2773C0D18F2A490361 /* Pods_HomeChef.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5BB25E752362016F0098CD01 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				5BB25E7C236205140098CD01 /* Reachability.swift */,
+				5BB25E762362019E0098CD01 /* Source */,
+				5BB25E7E23620A300098CD01 /* APIUrl.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		5C073A842361A17900E89CD7 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,11 +99,21 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		7F0054CBE62E23A19B1598AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2762C603B8D3CB522B50C7D /* Pods_HomeChef.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BB87EEF52360F55600C4A66F = {
 			isa = PBXGroup;
 			children = (
 				BB87EF002360F55600C4A66F /* HomeChef */,
 				BB87EEFF2360F55600C4A66F /* Products */,
+				D7D62812CA9B3FF9E1D5E6A0 /* Pods */,
+				7F0054CBE62E23A19B1598AD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +128,7 @@
 		BB87EF002360F55600C4A66F /* HomeChef */ = {
 			isa = PBXGroup;
 			children = (
+				5BB25E752362016F0098CD01 /* Networking */,
 				5C073A8D2361AE0900E89CD7 /* Utilities */,
 				5C073A862361A19400E89CD7 /* Home */,
 				5C073A852361A18C00E89CD7 /* Login */,
@@ -111,6 +143,15 @@
 			path = HomeChef;
 			sourceTree = "<group>";
 		};
+		D7D62812CA9B3FF9E1D5E6A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3FAFAB0AF8D083F427B98758 /* Pods-HomeChef.debug.xcconfig */,
+				D6CEA8DACAECC24471AD4977 /* Pods-HomeChef.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB87EF102360F55A00C4A66F /* Build configuration list for PBXNativeTarget "HomeChef" */;
 			buildPhases = (
+				7DA3C0316C3BB129281ADEFD /* [CP] Check Pods Manifest.lock */,
 				BB87EEFA2360F55600C4A66F /* Sources */,
 				BB87EEFB2360F55600C4A66F /* Frameworks */,
 				BB87EEFC2360F55600C4A66F /* Resources */,
+				C53A6C67EE9776907D15030B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -172,10 +215,53 @@
 				BB87EF0C2360F55A00C4A66F /* LaunchScreen.storyboard in Resources */,
 				BB87EF092360F55A00C4A66F /* Assets.xcassets in Resources */,
 				BB87EF072360F55600C4A66F /* Main.storyboard in Resources */,
+				5BB25E772362019E0098CD01 /* Source in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7DA3C0316C3BB129281ADEFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HomeChef-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C53A6C67EE9776907D15030B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HomeChef/Pods-HomeChef-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HomeChef/Pods-HomeChef-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HomeChef/Pods-HomeChef-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BB87EEFA2360F55600C4A66F /* Sources */ = {
@@ -188,7 +274,9 @@
 				BB87EF022360F55600C4A66F /* AppDelegate.swift in Sources */,
 				5C073A882361A1EA00E89CD7 /* LoginVC.swift in Sources */,
 				5C073A912361C99000E89CD7 /* NetworkingService.swift in Sources */,
+				5BB25E7D236205140098CD01 /* Reachability.swift in Sources */,
 				BB87EF142360FB9000C4A66F /* Custom_Btn.swift in Sources */,
+				5BB25E7F23620A300098CD01 /* APIUrl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +420,7 @@
 		};
 		BB87EF112360F55A00C4A66F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FAFAB0AF8D083F427B98758 /* Pods-HomeChef.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -350,6 +439,7 @@
 		};
 		BB87EF122360F55A00C4A66F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6CEA8DACAECC24471AD4977 /* Pods-HomeChef.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

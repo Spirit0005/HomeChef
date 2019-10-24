@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,7 +13,7 @@
         <!--Signup-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" userLabel="Signup" customClass="SignupVC" customModule="HomeChef" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Signup" customClass="SignupVC" customModule="HomeChef" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,7 +32,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fh4-X4-wkh" customClass="Custom_Btn" customModule="HomeChef" customModuleProvider="target">
-                                <rect key="frame" x="119.5" y="623.5" width="175" height="35"/>
+                                <rect key="frame" x="119.5" y="615.5" width="175" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="UqF-2j-gKy"/>
                                     <constraint firstAttribute="width" secondItem="fh4-X4-wkh" secondAttribute="height" multiplier="5:1" id="Z9o-Qj-mxw"/>
@@ -40,11 +42,12 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="SignupBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gB3-l0-bGX"/>
+                                    <action selector="signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oUf-tq-7ja"/>
+                                    <segue destination="ZGm-pC-gOI" kind="show" identifier="home" id="Cnp-su-d7v"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qSG-md-yVP">
-                                <rect key="frame" x="50" y="312.5" width="314" height="271"/>
+                                <rect key="frame" x="50" y="320.5" width="314" height="255"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irV-SE-5wl">
                                         <rect key="frame" x="0.0" y="0.0" width="49" height="25"/>
@@ -53,40 +56,40 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Bob-Wz-1R3">
-                                        <rect key="frame" x="0.0" y="30" width="314" height="34"/>
+                                        <rect key="frame" x="0.0" y="30" width="314" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogv-PS-Ftx">
-                                        <rect key="frame" x="0.0" y="69" width="51.5" height="25"/>
+                                        <rect key="frame" x="0.0" y="65" width="51.5" height="25"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="MWw-Gn-mdh">
-                                        <rect key="frame" x="0.0" y="99" width="314" height="34"/>
+                                        <rect key="frame" x="0.0" y="95" width="314" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="tel"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9k-Jf-A9q">
-                                        <rect key="frame" x="0.0" y="138" width="44" height="25"/>
+                                        <rect key="frame" x="0.0" y="130" width="44" height="25"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ViA-9S-hVs">
-                                        <rect key="frame" x="0.0" y="168" width="314" height="34"/>
+                                        <rect key="frame" x="0.0" y="160" width="314" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSd-JB-ODs">
-                                        <rect key="frame" x="0.0" y="207" width="75.5" height="25"/>
+                                        <rect key="frame" x="0.0" y="195" width="75.5" height="25"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="RrM-FF-mwX">
-                                        <rect key="frame" x="0.0" y="237" width="314" height="34"/>
+                                        <rect key="frame" x="0.0" y="225" width="314" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
@@ -103,7 +106,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GRa-37-GKE">
-                                <rect key="frame" x="110" y="678.5" width="194.5" height="30"/>
+                                <rect key="frame" x="110" y="670.5" width="194.5" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cK1-Ls-mqH">
                                         <rect key="frame" x="0.0" y="0.0" width="152.5" height="30"/>
@@ -158,7 +161,7 @@
         <!--LoginVC-->
         <scene sceneID="3hI-tR-mcr">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="ZGm-pC-gOI" customClass="LoginVC" customModule="HomeChef" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZGm-pC-gOI" customClass="LoginVC" customModule="HomeChef" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j3W-Wd-qDh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -222,14 +225,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOe-H5-rf7">
-                                <rect key="frame" x="20" y="66.5" width="41" height="30"/>
+                                <rect key="frame" x="20" y="64" width="41" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wOe-H5-rf7" secondAttribute="height" multiplier="2:1.7" id="kRh-xs-Vq3"/>
                                     <constraint firstAttribute="height" constant="35" id="o2L-6g-6cL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" backgroundImage="arrow.left" catalog="system"/>
+                                <state key="normal" backgroundImage="arrow.left"/>
                                 <connections>
                                     <action selector="BackBtn:" destination="ZGm-pC-gOI" eventType="touchUpInside" id="idp-fv-AsN"/>
                                 </connections>
@@ -253,17 +256,17 @@
                     <connections>
                         <outlet property="Password" destination="rHu-qW-ntE" id="6j5-LC-ZDG"/>
                         <outlet property="Phone" destination="6Uc-3s-mOH" id="Cr9-vb-mVQ"/>
-                        <segue destination="6Fl-SY-SEX" kind="presentation" identifier="home" id="sMd-Cm-Lfl"/>
+                        <segue destination="6Fl-SY-SEX" kind="presentation" identifier="login_to_home" id="sMd-Cm-Lfl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxl-Wk-JYk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="895.6521739130435" y="145.98214285714286"/>
+            <point key="canvasLocation" x="939" y="633"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="qkv-ze-3Z3">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="6Fl-SY-SEX" customClass="HomeVC" customModule="HomeChef" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6Fl-SY-SEX" customClass="HomeVC" customModule="HomeChef" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mwM-Ds-slv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -317,7 +320,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.left" catalog="system" width="64" height="48"/>
+        <image name="arrow.left" width="64" height="48"/>
         <image name="hc" width="303" height="276"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="yMk-nk-Pjt"/>
+    </inferredMetricsTieBreakers>
 </document>

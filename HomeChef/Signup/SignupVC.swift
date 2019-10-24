@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import Alamofire
+
+
+
 
 class SignupVC: UIViewController {
 
@@ -16,6 +20,8 @@ class SignupVC: UIViewController {
     @IBOutlet weak var Email: UITextField!
     @IBOutlet weak var Password: UITextField!
     
+    var reachability:Reachability!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,15 +29,7 @@ class SignupVC: UIViewController {
     }
     
     
-    @IBAction func SignupBtn(_ sender: Any) {
-        
-        if(validateFields()){
-            
-            
-                  performSegue(withIdentifier: "home", sender: nil)
-              }
-              
-    }
+  
     
     
     @IBAction func LoginBtn(_ sender: Any) {
@@ -40,7 +38,70 @@ class SignupVC: UIViewController {
     }
     
     
-    func apiCalling(){
+    private func apiCalling() -> Bool{
+       var value : Bool = false
+        do{
+            self.reachability = try Reachability.init()
+        }catch{
+            print("Unable to start notifier")
+        }
+        if ((reachability!.connection != .unavailable)){
+            showSpinner()
+            let parameters = [
+                
+                "name" : self.Name.text! as AnyObject,
+                "mobile" : self.Phone.text! as AnyObject,
+                "password" : self.Password.text! as AnyObject,
+                "email" : self.Email.text! as AnyObject
+
+            ]
+            
+            
+            let encodeURL = apiSignup
+            let requestofAPI = Alamofire.request(encodeURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
+            
+            requestofAPI.responseJSON(completionHandler: { (response) -> Void in
+              
+                print(response.request!)
+                print(response.result)
+                print(response.response as Any)
+                
+                
+                switch response.result{
+                    
+                case .success(let payload):
+                    self.removeSpinner()
+                    
+                    if let x = payload as? Dictionary<String,Any>{
+                        print("this is x \(x)")
+                        
+                         value = true
+                    }
+                    break
+                case .failure(let error):
+                    print("this is error \(error)")
+                    self.showAlert("Error", error as! String)
+                    value = false
+                }
+                
+
+            })
+            
+             }else{
+            let alert = UIAlertController(title: "Error", message: "Check your internet connection", preferredStyle: .alert)
+            let closeAction = UIAlertAction(title: "Close", style: UIAlertAction.Style.cancel, handler:{action in
+                print("Close")
+            })
+            alert.addAction(closeAction)
+            self.present(alert, animated: true, completion: nil )
+            
+            
+            
+            
+            
+        }
+        
+        return value
           
     }
     
@@ -103,4 +164,20 @@ class SignupVC: UIViewController {
            return isValid
        }
   
+    @IBAction func signUp(_ sender: Any) {
+       
+            
+            if(validateFields()){
+                
+                if(apiCalling()){
+                
+                    self.showAlert("Successful", "Successfully Registered")
+                performSegue(withIdentifier: "home", sender: nil)
+                }
+            }
+            
+        
+        
+    }
+    
 }
