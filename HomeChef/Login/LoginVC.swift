@@ -24,8 +24,8 @@ class LoginVC: UIViewController {
     }
     
     
-    private func apiCalling() -> Bool{
-        var value : Bool = false
+    private func apiCalling() {
+        
         do{
             self.reachability = try Reachability.init()
         }catch{
@@ -59,15 +59,16 @@ class LoginVC: UIViewController {
                     self.removeSpinner()
                     if let x = payload as? Dictionary<String,Any>{
                         print("this is x \(x)")
+                        self.performSegue(withIdentifier: "home", sender: nil)
                       
                       //  self.showAlert("Message", x.description)
-                        value = true
+                        
                     }
                     break
                 case .failure(let error):
                     print("this is error \(error)")
                     self.showAlert("Error", error as! String)
-                    value = false
+                   
                 }
                 
                 
@@ -87,15 +88,13 @@ class LoginVC: UIViewController {
             
         }
         
-        return value
+   
         
     }
     @IBAction func LoginBtn(_ sender: Any) {
         
         if(validateFields()){
-            if (apiCalling()){
-            performSegue(withIdentifier: "home", sender: nil)
-            }
+            apiCalling()
         }
         
     }

@@ -39,8 +39,8 @@ class SignupVC: UIViewController {
     }
     
     
-    private func apiCalling() -> Bool{
-       var value : Bool = false
+    private func apiCalling(){
+//       var value : Bool = false
         do{
             self.reachability = try Reachability.init()
         }catch{
@@ -76,17 +76,17 @@ class SignupVC: UIViewController {
                     if let x = payload as? Dictionary<String,Any>{
                         print("this is x \(x["message"]!)")
                        // self.showAlert("Message", x["message"]! as! String)
-                        
-                        if(x["message"]! as! String == "User registered successfully"){
-                            value = true
-                        }
+                        self.performSegue(withIdentifier: "login", sender: nil)
+//                        if(x["message"]! as! String == "User registered successfully"){
+//                            value = true
+//                        }
                     }
                     break
                 case .failure(let error):
                     print("this is error \(error)")
                     self.removeSpinner()
                     self.showAlert("Error", error.localizedDescription)
-                    value = false
+//                    value = false
                 }
                 
 
@@ -106,8 +106,8 @@ class SignupVC: UIViewController {
             
         }
         
-        return value
-          
+//        return value
+        
     }
     
     
@@ -174,11 +174,7 @@ class SignupVC: UIViewController {
             
             if(validateFields()){
                 
-                if(apiCalling()){
-                
-                    self.showAlert("Successful", "Successfully Registered")
-                performSegue(withIdentifier: "login", sender: nil)
-                }
+                 apiCalling()
             }
             
         
