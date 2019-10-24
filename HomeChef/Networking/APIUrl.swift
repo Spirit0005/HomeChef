@@ -2,7 +2,7 @@
 //  APIUrl.swift
 //  HomeChef
 //
-//  Created by Syed Arisha on 24/10/2019.
+//  Created by Hamza on 24/10/2019.
 //  Copyright © 2019 Hamza . All rights reserved.
 //
 

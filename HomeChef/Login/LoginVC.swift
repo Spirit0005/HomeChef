@@ -2,7 +2,7 @@
 //  LoginVC.swift
 //  HomeChef
 //
-//  Created by 2 Minut on 10/24/19.
+//  Created by Hamza on 10/24/19.
 //  Copyright © 2019 Hamza . All rights reserved.
 //
 
@@ -13,7 +13,6 @@ import Alamofire
 class LoginVC: UIViewController {
 
     
-    
     @IBOutlet weak var Phone: UITextField!
     @IBOutlet weak var Password: UITextField!
     
@@ -23,6 +22,8 @@ class LoginVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    
     private func apiCalling() -> Bool{
         var value : Bool = false
         do{

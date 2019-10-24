@@ -2,12 +2,13 @@
 //  SignupVC.swift
 //  HomeChef
 //
-//  Created by 2 Minut on 10/24/19.
+//  Created by Hamza on 10/24/19.
 //  Copyright © 2019 Hamza . All rights reserved.
 //
 
 import UIKit
 import Alamofire
+import Reachability
 
 
 
