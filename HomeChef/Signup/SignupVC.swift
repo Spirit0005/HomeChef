@@ -24,9 +24,19 @@ class SignupVC: UIViewController {
     
     
     @IBAction func SignupBtn(_ sender: Any) {
+        
+        if(validateFields()){
+            
+            
+                  performSegue(withIdentifier: "home", sender: nil)
+              }
+              
     }
     
+    
     @IBAction func LoginBtn(_ sender: Any) {
+        
+        performSegue(withIdentifier: "login", sender: nil)
     }
     
     

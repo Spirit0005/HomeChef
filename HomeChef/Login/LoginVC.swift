@@ -21,18 +21,52 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func LoginBtn(_ sender: Any) {
+        
+        if(validateFields()){
+            performSegue(withIdentifier: "home", sender: nil)
+        }
+        
     }
     
+    
     @IBAction func BackBtn(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    
+    
+    //------- function to check if any field is empty or incorrect
+    
+    func validateFields() -> Bool{
+        var  isValid = true
+        
+      
+             if (Password.text!.isEmpty || (Password.text == " " )) {
+         removeSpinner()
+            showAlert("Error","Password cannot be empty")
+            isValid = false
+        }else{
+                       isValid = true
+            
+        }
+    
+     if (Phone.text!.isEmpty || (Phone.text == " " )) {
+      removeSpinner()
+         showAlert("Error","Phone cannot be empty")
+         isValid = false
+     }else{
+         if (Phone.text!.isValidPhoneWithLength()) {
+                    isValid = true
+         }else{
+          removeSpinner()
+             showAlert("Error","Phone Number must be either 10 or 11 characters")
+                 return false
+                }
+     }
+        
+        return isValid
     }
-    */
 
 }
