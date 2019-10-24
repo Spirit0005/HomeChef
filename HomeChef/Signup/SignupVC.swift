@@ -75,8 +75,11 @@ class SignupVC: UIViewController {
                     
                     if let x = payload as? Dictionary<String,Any>{
                         print("this is x \(x["message"]!)")
-                        self.showAlert("Message", x["message"]! as! String)
-                         value = true
+                       // self.showAlert("Message", x["message"]! as! String)
+                        
+                        if(x["message"]! as! String == "User registered successfully"){
+                            value = true
+                        }
                     }
                     break
                 case .failure(let error):

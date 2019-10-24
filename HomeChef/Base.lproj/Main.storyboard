@@ -201,7 +201,7 @@
                                             <constraint firstAttribute="height" constant="35" id="kGD-AO-71b"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="tel"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="tel"/>
                                     </textField>
                                 </subviews>
                                 <constraints>

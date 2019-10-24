@@ -43,7 +43,7 @@ class LoginVC: UIViewController {
             ]
             
             
-            let encodeURL = apiSignup
+            let encodeURL = apiLogin
             let requestofAPI = Alamofire.request(encodeURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
             
             requestofAPI.responseJSON(completionHandler: { (response) -> Void in
@@ -60,7 +60,7 @@ class LoginVC: UIViewController {
                     if let x = payload as? Dictionary<String,Any>{
                         print("this is x \(x)")
                       
-                        self.showAlert("Message", x.description)
+                      //  self.showAlert("Message", x.description)
                         value = true
                     }
                     break
