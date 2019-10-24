@@ -40,6 +40,13 @@ class SignupVC: UIViewController {
     }
     
     
+    func apiCalling(){
+          
+    }
+    
+    
+    
+    
     //------- function to check if any field is empty or incorrect
        
        func validateFields() -> Bool{
