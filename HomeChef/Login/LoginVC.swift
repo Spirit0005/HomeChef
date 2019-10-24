@@ -31,7 +31,7 @@ class LoginVC: UIViewController {
         }catch{
             print("Unable to start notifier")
         }
-        if ((reachability!.connection != .unavailable)){
+        if ((reachability!.connection != .none)){
             showSpinner()
             let parameters = [
                 
@@ -94,7 +94,7 @@ class LoginVC: UIViewController {
         
         if(validateFields()){
             if (apiCalling()){
-            performSegue(withIdentifier: "login_to_home", sender: nil)
+            performSegue(withIdentifier: "home", sender: nil)
             }
         }
         

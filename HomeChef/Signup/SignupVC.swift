@@ -46,7 +46,7 @@ class SignupVC: UIViewController {
         }catch{
             print("Unable to start notifier")
         }
-        if ((reachability!.connection != .unavailable)){
+        if ((reachability!.connection != .none)){
             showSpinner()
             let parameters = [
                 
@@ -63,9 +63,9 @@ class SignupVC: UIViewController {
             
             requestofAPI.responseJSON(completionHandler: { (response) -> Void in
               
-                print(response.request!)
-                print(response.result)
-                print(response.response as Any)
+               // print(response.request!)
+               // print(response.result)
+                //print(response.response as Any)
                 
                 
                 switch response.result{
@@ -74,14 +74,15 @@ class SignupVC: UIViewController {
                     self.removeSpinner()
                     
                     if let x = payload as? Dictionary<String,Any>{
-                        print("this is x \(x)")
-                        
+                        print("this is x \(x["message"]!)")
+                        self.showAlert("Message", x["message"]! as! String)
                          value = true
                     }
                     break
                 case .failure(let error):
                     print("this is error \(error)")
-                    self.showAlert("Error", error as! String)
+                    self.removeSpinner()
+                    self.showAlert("Error", error.localizedDescription)
                     value = false
                 }
                 
@@ -173,7 +174,7 @@ class SignupVC: UIViewController {
                 if(apiCalling()){
                 
                     self.showAlert("Successful", "Successfully Registered")
-                performSegue(withIdentifier: "home", sender: nil)
+                performSegue(withIdentifier: "login", sender: nil)
                 }
             }
             
